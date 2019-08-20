@@ -11,53 +11,51 @@
   </header>
   <main>
     <section id="left-half">
-      <section id="set-range">
-        <form>
-          <h3>Set Range</h3>
-          <p>Min Range</p>
-          <input type="text" name="" value="">
-          <p>Max Range</p>
-          <input type="text" name="" value="">
-          <button type="button" id="update-button">UPDATE</button>
-        </form>
+      <form id="set-range">
+        <h3>Set Range</h3>
+        <p>Min Range</p>
+        <input type="text" name="" value="">
+        <p>Max Range</p>
+        <input type="text" name="" value="">
+        <button type="button" id="update-button">UPDATE</button>
+      </form>
+    <section id="info-input">
+      <p>The Current Range is 1 to 100</p>
+      <div id="challenger1">
+        <h3>Challenger 1</h3>
+        <label for="challenger1-name">Name</label><br>
+        <input class="challenger-name" type="text" id="challenger1-name">
+        <label class="guess-box" for="guess1">Guess</label><br>
+        <input class="challenger-name"type="text" id="guess1">
+      </div>
+      <div id="challenger2">
+        <h3>Challenger 2</h3>
+        <label for="challenger2-name">Name</label><br>
+        <input class="challenger-name" type="text" id="challenger2-name">
+        <label class="guess-box" for="guess2">Guess</label><br>
+        <input class="challenger-name"type="text" id="guess2">
+      </div>
+      <div id="game-buttons">
+        <button type="button" id="submit-guess">SUBMIT GUESS</button>
+        <button type="button" id="reset-game">RESET GAME</button>
+        <button type="button" id="clear-game">CLEAR GAME</button>
+      </div>
+    </section>
+    <section id="guesses">
+      <h3>Latest Score</h3>
+      <section id="challenger1-guess">
+        <p><span class="challenger-guess" id="challenger1-result">Challenger 1 Name</span><br>
+          current guess<br>
+          <span class="guess-result" id="challenger1-guess-result">97</span><br>
+          <span class="hint" id="challenger1-hint">that's too high</span></p>
       </section>
-      <section id="info-input">
-        <p>The Current Range is 1 to 100</p>
-        <div id="challenger1">
-          <h3>Challenger 1</h3>
-          <label for="challenger1-name">Name</label><br>
-          <input class="challenger-name" type="text" id="challenger1-name">
-          <label class="guess-box" for="guess1">Guess</label><br>
-          <input class="challenger-name"type="text" id="guess1">
-        </div>
-        <div id="challenger2">
-          <h3>Challenger 2</h3>
-          <label for="challenger2-name">Name</label><br>
-          <input class="challenger-name" type="text" id="challenger2-name">
-          <label class="guess-box" for="guess2">Guess</label><br>
-          <input class="challenger-name"type="text" id="guess2">
-        </div>
-        <div id="game-buttons">
-          <button type="button" id="submit-guess">SUBMIT GUESS</button>
-          <button type="button" id="reset-game">RESET GAME</button>
-          <button type="button" id="clear-game">CLEAR GAME</button>
-        </div>
-      </section>
-      <section id="guesses">
-        <h3>Latest Score</h3>
-        <section id="challenger1-guess">
-          <p><span class="challenger-guess" id="challenger1-result">Challenger 1 Name</span><br>
-            current guess<br>
-            <span class="guess-result" id="challenger1-guess-result">97</span><br>
-            <span class="hint" id="challenger1-hint">that's too high</span></p>
-        </section>
-        <section id="challenger2-guess">
-          <p><span class="challenger-guess" id="challenger2-result">Challenger 2 Name</span><br>
-            current guess<br>
-            <span class="guess-result" id="challenger2-guess-result">97</span><br>
-            <span class="hint" id="challenger2-hint">that's too high</span></p>
-        </section>
-      </section>
+      <section id="challenger2-guess">
+        <p><span class="challenger-guess" id="challenger2-result">Challenger 2 Name</span><br>
+          current guess<br>
+          <span class="guess-result" id="challenger2-guess-result">97</span><br>
+          <span class="hint" id="challenger2-hint">that's too high</span></p>
+       </section>
+     </section>
     </section>
     <section id="right-half">
       <section id="game-results">
@@ -68,9 +66,9 @@
         <h2><span id="announcement">CHALLENGER 2 NAME</span><br>WINNER</h2>
         </div>
         <div id="game-stats">
-          <p><span id="guess-count">47</span> GUESSES</p>
-          <p><span id="game-time">1.35</span> MINUTES</p>
-          <button type=button id="clear-card">X</button>
+        <p><span id="guess-count">47</span> GUESSES</p>
+        <p><span id="game-time">1.35</span> MINUTES</p>
+        <button type=button id="clear-card">X</button>
         </div>
       </section>
     </section>
