@@ -1,0 +1,12 @@
+.subtitle{
+  border-bottom: 1px solid grey;
+  line-height: 0.1em;
+}
+.subtitle span{
+  padding: 10px;
+}
+h1,
+.subtitle{
+  text-align: center;
+  width: 50%;
+}
