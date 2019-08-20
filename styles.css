@@ -1,12 +1,44 @@
-.subtitle{
-  border-bottom: 1px solid grey;
-  line-height: 0.1em;
+* {
+  font-family: "Open Sans", sans-serif;
 }
-.subtitle span{
-  padding: 10px;
-}
-h1,
-.subtitle{
+
+header {
+  display: flex;
+  font-weight: 300;
+  color: #DD1972;
+  background-color: #404041;
   text-align: center;
+  padding: 2%;
+}
+
+.heading {
+  align-items: center;
+  margin: auto;
+  height: 8em;
+}
+
+.whole-title {
+  width: 100%;
+}
+
+.title {
+  font-size: 50px;
+  display: inline;
+  font-weight: 800;
+}
+
+.title2 {
+  font-size: 50px;
+  display: inline;
   width: 50%;
+}
+
+.subtitle {
+  color: white;
+  border-bottom: 1px solid white;
+  line-height: 0.1em;
+  width: 100;
+  margin: auto;
+  font-size: 18px;
+  margin-top: 0px;
 }
