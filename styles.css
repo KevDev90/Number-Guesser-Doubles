@@ -20,7 +20,7 @@ header {
   color: #DD1972;
   background-color: #404041;
   text-align: center;
-  padding: 2%;
+  padding: 1.5% 2% 3.3% 2%;
 }
 
 .heading {
@@ -30,29 +30,48 @@ header {
 }
 
 .whole-title {
+  filter: brightness(100%);
   width: 100%;
 }
 
 .title {
-  font-size: 50px;
+  font-size: 4.8em;
   display: inline;
   font-weight: 800;
 }
 
 .title2 {
-  font-size: 50px;
+  font-size: 4.8em;
   display: inline;
   width: 50%;
 }
 
-.subtitle {
+.subtitle{
+  font-size: 1.5em;
   color: white;
-  border-bottom: 1px solid white;
-  line-height: 0.1em;
-  width: 100;
-  margin: auto;
-  font-size: 18px;
-  margin-top: 0px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.subtitle span{
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+.subtitle:before,
+.subtitle:after {
+    content: '';
+    border-top: 2px solid;
+    margin: 0 10px 0 0;
+    flex: 1 0 20px;
+}
+
+.subtitle:after {
+    margin: 0 0 0 10px;
 }
 
 main {
@@ -81,8 +100,9 @@ main {
 }
 
 input {
-  height: 35px;
+  height: 40px;
   width: 100%;
+  border: 1px solid #E6E6E6;
 }
 #set-range {
   display: flex;
