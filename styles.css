@@ -1,10 +1,63 @@
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  font-size: 20px;
+  color: #6E6E6E;
+}
+
+h2 {
+  color: #404041;
+}
+
+header {
+  display: flex;
+  font-weight: 300;
+  background-color: #404041;
+  text-align: center;
+  padding: 1.5% 2% 3.3% 2%;
+}
+
+.heading {
+  align-items: center;
+  margin: auto;
+  height: 8em;
+}
+
+.whole-title {
+  filter: brightness(100%);
+  width: 100%;
+  color: #DD1972;
+}
+
+.title {
+  font-size: 4.8em;
+  display: inline;
+  font-weight: 800;
+}
+
+.title2 {
+  font-size: 4.8em;
+  display: inline;
+  width: 50%;
+}
+
 .subtitle{
+  font-size: 1.5em;
+  color: white;
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
+
 .subtitle span{
   padding: 10px;
   display: inline-block;
@@ -15,10 +68,88 @@
 .subtitle:after {
     content: '';
     border-top: 2px solid;
-    margin: 0 20px 0 0;
+    margin: 0 10px 0 0;
     flex: 1 0 20px;
 }
 
 .subtitle:after {
-    margin: 0 0 0 20px;
+    margin: 0 0 0 10px;
+}
+
+main {
+  display: flex;
+}
+
+.half {
+  padding: 1%;
+  width: 50%;
+}
+
+#left-half {
+  background-color: #F7F7F7;
+}
+
+#right-half {
+  border-left: 2px solid #A19E9E;
+  background-color: #D1D0D0;
+}
+
+.left-tile {
+  background-color: white;
+  border: 2px solid #E6E6E6;
+  margin: 1.5%;
+  padding: 2%;
+}
+
+input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid #E6E6E6;
+}
+#set-range {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  padding: 13.8px 0 25px 13.8px;
+}
+
+#range-title {
+  position: absolute;
+  left: 1;
+  top: 0;
+  margin: 0;
+}
+
+#update-button {
+  background-color: #6E6E6E;
+  color: white;
+  width: 86%;
+  height: 44px;
+  border-radius: 30px;
+  font-size: 23px;
+  font-weight: bold;
+
+}
+
+.range-element {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: auto;
+  padding: .5%;
+  width: 31%;
+  height: 5.5em;
+}
+
+.range-box1,
+.range-box2 {
+
+
+}
+
+#game-results {
+  margin: 1.5% 4%;
+  padding: 2%;
+  background-color: white;
+  border: 2px solid #A19E9E;
 }
