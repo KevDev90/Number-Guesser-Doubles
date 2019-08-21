@@ -101,6 +101,15 @@ main {
   padding: 2%;
 }
 
+#min-range-choice,
+#max-range-choice{
+  color: #404041;
+  font-weight: bold;
+  text-decoration: underline;
+
+}
+
+
 input {
   height: 40px;
   width: 100%;
@@ -139,6 +148,20 @@ input {
   padding: .5%;
   width: 31%;
   height: 5.5em;
+}
+
+#clear-game,
+#reset-game,
+#submit-guess {
+
+background-color: #6E6E6E;
+color: white;
+border-radius: 30px;
+width: 30%;
+height: 44px;
+font-size: 23px;
+font-weight: bold;
+
 }
 
 .range-box1,
