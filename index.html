@@ -14,26 +14,30 @@
   </div>
   </header>
   <main>
-    <section id="left-half">
-      <form id="set-range">
-        <h3>Set Range</h3>
-        <p>Min Range</p>
-        <input type="text" name="" value="">
-        <p>Max Range</p>
-        <input type="text" name="" value="">
-        <button type="button" id="update-button">UPDATE</button>
+    <section class="half" id="left-half">
+      <form class="left-tile" id="set-range">
+        <h2 id="range-title">Set Range</h2>
+        <div class="range-element">
+          <p>Min Range<input type="text" class="range-box" id="min-range"></p>
+        </div>
+        <div class="range-element">
+          <p>Max Range<input type="text" class="range-box" id="max-range"><p>
+        </div>
+        <div class="range-element">
+          <button type="button" id="update-button">UPDATE</button>
+        </div>
       </form>
-    <section id="info-input">
-      <p>The Current Range is 1 to 100</p>
+    <section class="left-tile" id="info-input">
+      <p>The Current Range is <span id="min-range-choice">1</span> to <span id="max-range-choice">100</span></p>
       <div id="challenger1">
-        <h3>Challenger 1</h3>
+        <h2>Challenger 1</h2>
         <label for="challenger1-name">Name</label><br>
         <input class="challenger-name" type="text" id="challenger1-name">
         <label class="guess-box" for="guess1">Guess</label><br>
         <input class="challenger-name"type="text" id="guess1">
       </div>
       <div id="challenger2">
-        <h3>Challenger 2</h3>
+        <h2>Challenger 2</h2>
         <label for="challenger2-name">Name</label><br>
         <input class="challenger-name" type="text" id="challenger2-name">
         <label class="guess-box" for="guess2">Guess</label><br>
@@ -45,8 +49,8 @@
         <button type="button" id="clear-game">CLEAR GAME</button>
       </div>
     </section>
-    <section id="guesses">
-      <h3>Latest Score</h3>
+    <section class="left-tile" id="guesses">
+      <h2>Latest Score</h2>
       <section id="challenger1-guess">
         <p><span class="challenger-guess" id="challenger1-result">Challenger 1 Name</span><br>
           current guess<br>
@@ -61,7 +65,7 @@
        </section>
      </section>
     </section>
-    <section id="right-half">
+    <section class="half" id="right-half">
       <section id="game-results">
         <div id="matchup">
           <p>CHALLENGER 1 NAME <span id="vs">VS </span> CHALLENGER 2 NAME</p>
