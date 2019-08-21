@@ -29,18 +29,18 @@
       </form>
     <section class="left-tile" id="info-input">
       <p>The Current Range is <span id="min-range-choice">1</span> to <span id="max-range-choice">100</span></p>
-      <div id="challenger1">
-        <h2>Challenger 1</h2>
-         <p>Name<input class="challenger-name" type="text" id="challenger1-name">Guess<input
-         class="challenger-name"type="text" id="guess1">
-      </div>
-      <div id="challenger2">
-        <h2>Challenger 2</h2>
-        <label for="challenger2-name">Name</label><br>
-        <input class="challenger-name" type="text" id="challenger2-name">
-        <label class="guess-box" for="guess2">Guess</label><br>
-        <input class="challenger-name"type="text" id="guess2">
-      </div>
+      <section id="player-input">
+       <article id="name-input">
+         <h2>Challenger 1</h2>
+           <label for="-challenger1-name-box">Name</label><br><input type="text">
+           <h2>Challenger 2</h2>
+           <label for="-challenger2-name-box">Name</label><br><input type="text">
+       </article>
+       <article id="guess-input">
+         <label for="number-guess-box1">Guess</label><br><input type=text><br><br><br>
+         <label for="number-guess-boxs">Guess</label><br><input type=text>
+       </aritcle>
+     </section>
       <div id="game-buttons">
         <button type="button" id="submit-guess">SUBMIT GUESS</button>
         <button type="button" id="reset-game">RESET GAME</button>
