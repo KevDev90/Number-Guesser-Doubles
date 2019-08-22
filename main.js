@@ -22,19 +22,10 @@ updateButton.addEventListener('click', function() {
 
 submitGuessButton.addEventListener('click', submitGuess);
 
-
-
-
-
-
-
-
-
-
-
 function submitGuess() {
-  challenger1Name.innerText = ` ${challenger1NameInput.value}`;
-  challenger2Name.innerText = ` ${challenger2NameInput.value}`;
+  for (var i = 0; i < challenger1Name.length; i++) {
+    console.log(challenger1Name[i].innerText)
+    challenger1Name[i].innerText = `${challenger1NameInput.value}`}
   challenger1Guess.innerText = ` ${challenger1GuessInput.value}`;
   challenger2Guess.innerText = ` ${challenger2GuessInput.value}`;
 };
