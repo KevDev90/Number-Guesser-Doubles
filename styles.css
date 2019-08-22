@@ -102,19 +102,18 @@ main {
 }
 
 #min-range-choice,
-#max-range-choice{
+#max-range-choice {
   color: #404041;
   font-weight: bold;
   text-decoration: underline;
-
 }
-
 
 input {
   height: 40px;
   width: 100%;
   border: 1px solid #E6E6E6;
 }
+
 #set-range {
   display: flex;
   position: relative;
@@ -199,8 +198,6 @@ display: flex;
 position: relative;
 justify-content: space-around;
 
-
-
 }
 
 .latest-score{
@@ -232,6 +229,5 @@ font-size: 25px;
 #challenger2-guess{
   text-align: center;
   padding-top: 2%;
-
 
 }
