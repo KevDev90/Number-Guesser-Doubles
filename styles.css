@@ -193,3 +193,45 @@ font-weight: bold;
   border-radius: 50%;
 
 }
+
+#guesses{
+display: flex;
+position: relative;
+justify-content: space-around;
+
+
+
+}
+
+.latest-score{
+position: absolute;
+top:0;
+left:1;
+margin:0;
+}
+
+.challenger-guess{
+font-weight: bold;
+color: #6E6E6E;
+
+}
+
+.hint{
+font-weight: 100;
+font-size: 25px;
+
+}
+
+.guess-result{
+  color: #DD1972;
+  filter: brightness(100%);
+  font-size: 4.9em;
+  font-weight: 800;
+}
+#challenger1-guess,
+#challenger2-guess{
+  text-align: center;
+  padding-top: 2%;
+
+
+}
