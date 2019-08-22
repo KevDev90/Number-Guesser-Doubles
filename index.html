@@ -31,14 +31,14 @@
       <p>The Current Range is <span id="min-range-choice">1</span> to <span id="max-range-choice">100</span></p>
       <section id="player-input">
        <article id="name-input">
-         <h2>Challenger 1</h2>
-           <label for="-challenger1-name-box">Name</label><br><input type="text">
-           <h2>Challenger 2</h2>
-           <label for="-challenger2-name-box">Name</label><br><input type="text">
+         <h2 class="challenger1">Challenger 1</h2>
+           <label for="-challenger1-name-box">Name</label><br><input id="challenger1-name-box" type="text">
+           <h2 class="challenger2">Challenger 2</h2>
+           <label for="-challenger2-name-box">Name</label><br><input id="challenger2-name-box" type="text">
        </article>
        <article id="guess-input">
-         <label for="number-guess-box1">Guess</label><br><input type="number"><br><br><br>
-         <label for="number-guess-boxs">Guess</label><br><input type="number">
+         <label for="number-guess-box1">Guess</label><br><input id="number-guess-box1" type="number"><br><br><br>
+         <label for="number-guess-box2">Guess</label><br><input id="number-guess-box2" type="number">
        </aritcle>
      </section>
       <div id="game-buttons">
@@ -50,13 +50,13 @@
     <section class="left-tile" id="guesses">
       <h2 class="latest-score">Latest Score</h2>
       <section id="challenger1-guess">
-        <p><span class="challenger-guess" id="challenger1-result">Challenger 1 Name</span><br>
+        <p><span class="challenger-guess challenger1" id="challenger1-result">Challenger 1 Name</span><br>
           current guess<br>
           <span class="guess-result" id="challenger1-guess-result">97</span><br>
           <span class="hint" id="challenger1-hint">that's too high</span></p>
       </section>
       <section id="challenger2-guess">
-        <p><span class="challenger-guess" id="challenger2-result">Challenger 2 Name</span><br>
+        <p><span class="challenger-guess challenger2" id="challenger2-result">Challenger 2 Name</span><br>
           current guess<br>
           <span class="guess-result" id="challenger2-guess-result">97</span><br>
           <span class="hint" id="challenger2-hint">that's too high</span></p>
@@ -66,7 +66,7 @@
     <section class="half" id="right-half">
       <section id="game-results">
         <div id="matchup">
-          <p>CHALLENGER 1 NAME <span id="vs">VS </span> CHALLENGER 2 NAME</p>
+          <p><span class="challenger1">CHALLENGER 1 NAME</span><span id="vs">VS </span><span class="challenger2">CHALLENGER 2 NAME</span></p>
         </div>
         <div id="winner">
         <h2><span id="announcement">CHALLENGER 2 NAME</span><br>WINNER</h2>
