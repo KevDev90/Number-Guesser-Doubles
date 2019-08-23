@@ -24,8 +24,7 @@ submitGuessButton.addEventListener('click', submitGuess);
 
 function submitGuess() {
   for (var i = 0; i < challenger1Name.length; i++) {
-    console.log(challenger1Name[i].innerText)
-    challenger1Name[i].innerText = `${challenger1NameInput.value}`}
+    challenger1Name[i].innerText = `${challenger1NameInput.value} `}
   challenger1Guess.innerText = ` ${challenger1GuessInput.value}`;
   challenger2Guess.innerText = ` ${challenger2GuessInput.value}`;
 };

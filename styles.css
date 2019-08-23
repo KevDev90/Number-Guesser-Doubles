@@ -48,7 +48,7 @@ header {
   width: 50%;
 }
 
-.subtitle{
+.subtitle {
   font-size: 1.5em;
   color: white;
   display: flex;
@@ -58,7 +58,7 @@ header {
   text-align: center;
 }
 
-.subtitle span{
+.subtitle span {
   padding: 10px;
   display: inline-block;
   position: relative;
@@ -109,6 +109,10 @@ main {
 }
 
 input {
+  color: #6E6E6E;
+  font: "Open Sanes", sans-serif;
+  font-size: 18px;
+  padding-left: 5px;
   height: 40px;
   width: 100%;
   border: 1px solid #E6E6E6;
@@ -129,6 +133,7 @@ input {
 }
 
 #update-button {
+  cursor: pointer;
   background-color: #6E6E6E;
   color: white;
   width: 86%;
@@ -136,7 +141,6 @@ input {
   border-radius: 30px;
   font-size: 23px;
   font-weight: bold;
-
 }
 
 .range-element {
@@ -168,15 +172,16 @@ input {
 #clear-game,
 #reset-game,
 #submit-guess {
-
-background-color: #6E6E6E;
-color: white;
-border-radius: 30px;
-width: 30%;
-height: 44px;
-font-size: 23px;
-font-weight: bold;
-
+ cursor: pointer;
+ margin-left: 10px;
+ margin-top: 30px;
+ background-color: #6E6E6E;
+ color: white;
+ border-radius: 30px;
+ width: 30%;
+ height: 44px;
+ font-size: .9em;
+ font-weight: bold;
 }
 
 #game-results {
@@ -190,44 +195,40 @@ font-weight: bold;
   background-color: #6E6E6E;
   color: #D0D2D3;
   border-radius: 50%;
-
 }
 
-#guesses{
+#guesses {
 display: flex;
 position: relative;
 justify-content: space-around;
-
 }
 
-.latest-score{
-position: absolute;
-top:0;
-left:1;
-margin:0;
+.latest-score {
+ position: absolute;
+ top:0;
+ left:1;
+ margin:0;
 }
 
-.challenger-guess{
-font-weight: bold;
-color: #6E6E6E;
-
+.challenger-guess {
+ font-weight: bold;
+ color: #6E6E6E;
 }
 
-.hint{
-font-weight: 100;
-font-size: 25px;
-
+.hint {
+ font-weight: 100;
+ font-size: 25px;
 }
 
-.guess-result{
+.guess-result {
   color: #DD1972;
   filter: brightness(100%);
   font-size: 4.9em;
   font-weight: 800;
 }
+
 #challenger1-guess,
-#challenger2-guess{
+#challenger2-guess {
   text-align: center;
   padding-top: 2%;
-
 }
