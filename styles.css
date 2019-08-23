@@ -21,7 +21,8 @@ header {
   font-weight: 300;
   background-color: #404041;
   text-align: center;
-  padding: 1.5% 2% 3.3% 2%;
+  padding: 1.5% 2% 2.3% 2%;
+  height: 125px;
 }
 
 .heading {
@@ -34,6 +35,7 @@ header {
   filter: brightness(100%);
   width: 100%;
   color: #DD1972;
+  margin-top: -30px;
 }
 
 .title {
@@ -114,7 +116,7 @@ input {
   font-size: 18px;
   padding-left: 5px;
   height: 40px;
-  width: 100%;
+  width: 120%;
   border: 1px solid #E6E6E6;
 }
 
@@ -130,6 +132,11 @@ input {
   left: 1;
   top: 0;
   margin: 0;
+}
+
+#min-range,
+#max-range {
+  width: 95%;
 }
 
 #update-button {
@@ -156,17 +163,20 @@ input {
 #player-input {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 #name-input {
-  flex-count: 1;
   width: 50%;
 }
 
 #guess-input {
-  flex-count: 2;
-  width: 30%;
+  width: 25%;
+  margin-right: 8%;
+}
+
+#number-guess-box1 {
+  margin-bottom: 7px;
 }
 
 #clear-game,
@@ -206,7 +216,7 @@ justify-content: space-around;
 .latest-score {
  position: absolute;
  top:0;
- left:1;
+ left:15px;
  margin:0;
 }
 
@@ -229,6 +239,82 @@ justify-content: space-around;
 
 #challenger1-guess,
 #challenger2-guess {
+  justify-content: space-around;
   text-align: center;
   padding-top: 2%;
+  width: 50%;
+}
+
+#challenger1-guess {
+  border-right: 1px solid grey;
+}
+
+#game-results {
+  position: relative;
+}
+
+.final-tile {
+  text-align: center;
+  font-size: 15px;
+}
+
+.challenger1,
+.challenger2 {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+#vs {
+  font-size: 13px;
+}
+
+.challenger1 {
+  margin-right: 10px;
+}
+
+.challenger2 {
+  margin-left: 10px;
+}
+
+#winner {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom:20px;
+  font-weight: lighter;
+}
+
+#guess-count,
+#game-time {
+  font-weight: bold;
+}
+
+.guess-stat {
+  position: absolute;
+  bottom: 4px;
+  left: 15px;
+}
+
+.time-count {
+  position: absolute;
+  bottom: 5px;
+  left: 40%;
+}
+
+#clear-card {
+  cursor: pointer;
+  position: absolute;
+  bottom: 6px;
+  right: 12px;
+  font-size: 14px;
+}
+
+#announcement {
+  font-size: 30px;
+}
+
+.winner-banner {
+  font-weight: lighter;
+  font-size: 25px;
 }
