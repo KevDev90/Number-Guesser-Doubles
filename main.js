@@ -24,6 +24,8 @@ updateButton.addEventListener('click', updateGame);
 
 submitGuessButton.addEventListener('click', submitGuess);
 
+resetGame.addEventListener('click', gameReset);
+
 
 function updateGame() {
   genRandomNumber();
@@ -48,6 +50,7 @@ function genRandomNumber() {
     max = 100;
   }
   randomNumber = Math.floor(Math.random() * (+max - +min)) + +min;
+  console.log(randomNumber);
 };
 
 
@@ -98,3 +101,7 @@ function inputCheck() {
     clearGame.disabled = false;
   }
 };
+
+function gameReset() {
+  genRandomNumber();
+}
