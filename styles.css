@@ -7,9 +7,9 @@ body {
 }
 
 p {
-  margin: 0;
-  font-size: 20px;
   color: #6E6E6E;
+  font-size: 20px;
+  margin: 0;
 }
 
 h2 {
@@ -17,61 +17,61 @@ h2 {
 }
 
 header {
+  background-color: #404041;
   display: flex;
   font-weight: 300;
-  background-color: #404041;
-  text-align: center;
-  padding: 1.5% 2% 2.3% 2%;
   height: 125px;
+  padding: 1.5% 2% 2.3% 2%;
+  text-align: center;
 }
 
 .heading {
   align-items: center;
-  margin: auto;
   height: 8em;
+  margin: auto;
 }
 
 .whole-title {
-  filter: brightness(100%);
-  width: 100%;
   color: #DD1972;
+  filter: brightness(100%);
   margin-top: -30px;
+  width: 100%;
 }
 
 .title {
-  font-size: 4.8em;
   display: inline;
+  font-size: 4.8em;
   font-weight: 800;
 }
 
 .title2 {
-  font-size: 4.8em;
   display: inline;
+  font-size: 4.8em;
   width: 50%;
 }
 
 .subtitle {
-  font-size: 1.5em;
+  align-items: center;
   color: white;
   display: flex;
-  width: 100%;
+  font-size: 1.5em;
   justify-content: center;
-  align-items: center;
   text-align: center;
+  width: 100%;
 }
 
 .subtitle span {
-  padding: 10px;
   display: inline-block;
+  padding: 10px;
   position: relative;
 }
 
 .subtitle:before,
 .subtitle:after {
+  border-top: 2px solid;
     content: '';
-    border-top: 2px solid;
-    margin: 0 10px 0 0;
     flex: 1 0 20px;
+    margin: 0 10px 0 0;
 }
 
 .subtitle:after {
@@ -92,8 +92,8 @@ main {
 }
 
 #right-half {
-  border-left: 2px solid #A19E9E;
   background-color: #D1D0D0;
+  border-left: 2px solid #A19E9E;
 }
 
 .left-tile {
@@ -111,27 +111,26 @@ main {
 }
 
 input {
+  border: 1px solid #E6E6E6;
   color: #6E6E6E;
   font: "Open Sanes", sans-serif;
   font-size: 18px;
-  padding-left: 5px;
   height: 40px;
+  padding-left: 5px;
   width: 120%;
-  border: 1px solid #E6E6E6;
 }
 
 #set-range {
   display: flex;
-  position: relative;
   justify-content: space-between;
-  padding: 13.8px 0 25px 13.8px;
+  padding: 18.8px 0 16px 13.8px;
+  position: relative;
 }
 
 #range-title {
-  position: absolute;
-  left: 1;
-  top: 0;
   margin: 0;
+  position: absolute;
+  top: 7px;
 }
 
 #min-range,
@@ -140,30 +139,30 @@ input {
 }
 
 #update-button {
-  cursor: pointer;
   background-color: #6E6E6E;
-  color: white;
-  width: 86%;
-  height: 44px;
   border-radius: 30px;
+  color: white;
+  cursor: pointer;
   font-size: 23px;
   font-weight: bold;
+  height: 44px;
+  width: 86%;
 }
 
 .range-element {
-  display: flex;
   align-items: flex-end;
+  display: flex;
+  height: 5.5em;
   justify-content: center;
   margin-top: auto;
   padding: .5%;
   width: 31%;
-  height: 5.5em;
 }
 
 #player-input {
+  align-items: flex-end;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
 }
 
 #name-input {
@@ -171,8 +170,8 @@ input {
 }
 
 #guess-input {
-  width: 25%;
   margin-right: 8%;
+  width: 25%;
 }
 
 #number-guess-box1 {
@@ -182,52 +181,66 @@ input {
 #clear-game,
 #reset-game,
 #submit-guess {
- cursor: pointer;
- margin-left: 10px;
- margin-top: 30px;
- background-color: #6E6E6E;
- color: white;
- border-radius: 30px;
- width: 30%;
- height: 44px;
- font-size: .9em;
- font-weight: bold;
+  background-color: #6E6E6E;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-size: .9em;
+  font-weight: bold;
+  height: 44px;
+  margin-left: 10px;
+  margin-top: 30px;
+  width: 30%;
+}
+
+#clear-game:disabled,
+#reset-game:disabled,
+#submit-guess:disabled {
+  background-color: #D0D2D3;
+}
+
+#update-button:hover:enabled,
+#clear-game:hover:enabled,
+#reset-game:hover:enabled,
+#submit-guess:hover:enabled {
+  background-color: #DD1972;
 }
 
 #game-results {
-  margin: 1.5% 4%;
-  padding: 2%;
   background-color: white;
   border: 2px solid #A19E9E;
+  margin: 1.5% 4%;
+  padding: 2%;
 }
 
 #clear-card {
   background-color: #6E6E6E;
-  color: #D0D2D3;
   border-radius: 50%;
+  color: #D0D2D3;
 }
 
 #guesses {
-display: flex;
-position: relative;
-justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1%;
+  position: relative;
 }
 
 .latest-score {
- position: absolute;
- top:0;
- left:15px;
- margin:0;
+  left:15px;
+  margin:0;
+  position: absolute;
+  top: 6px;
 }
 
 .challenger-guess {
- font-weight: bold;
- color: #6E6E6E;
+  color: #6E6E6E;
+  font-weight: bold;
 }
 
 .hint {
- font-weight: 100;
- font-size: 25px;
+  font-size: 25px;
+  font-weight: 100;
 }
 
 .guess-result {
@@ -240,8 +253,8 @@ justify-content: space-around;
 #challenger1-guess,
 #challenger2-guess {
   justify-content: space-around;
+  padding-top: 6%;
   text-align: center;
-  padding-top: 4%;
   width: 50%;
 }
 
@@ -249,20 +262,29 @@ justify-content: space-around;
   border-right: 1px solid grey;
 }
 
+.current-guess {
+  font-size: 24px;
+  font-weight: lighter;
+}
+
 #game-results {
+  /* display: none; */
   position: relative;
-  display: none;
 }
 
 .final-tile {
-  text-align: center;
   font-size: 15px;
+  text-align: center;
 }
 
 .challenger1,
 .challenger2 {
-  font-weight: bold;
   font-size: 17px;
+  font-weight: bold;
+}
+
+.hint-box-name {
+  font-size: 25px;
 }
 
 #vs {
@@ -276,12 +298,12 @@ justify-content: space-around;
 
 
 #winner {
-  border-top: 1px solid grey;
   border-bottom: 1px solid grey;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom:20px;
+  border-top: 1px solid grey;
   font-weight: lighter;
+  margin-bottom:20px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 #guess-count,
@@ -290,30 +312,39 @@ justify-content: space-around;
 }
 
 .guess-stat {
-  position: absolute;
   bottom: 4px;
   left: 15px;
+  position: absolute;
 }
 
 .time-count {
-  position: absolute;
   bottom: 5px;
   left: 40%;
+  position: absolute;
 }
 
 #clear-card {
-  cursor: pointer;
-  position: absolute;
   bottom: 6px;
-  right: 12px;
+  cursor: pointer;
   font-size: 14px;
+  position: absolute;
+  right: 12px;
 }
 
 #announcement {
+  color: #6E6E6E;
   font-size: 30px;
+  font-weight: bolder;
 }
 
 .winner-banner {
-  font-weight: lighter;
-  font-size: 25px;
+  color: #6E6E6E;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.bottom-row {
+  color: #6E6E6E;
+  font-size: 16px;
+  font-weight: 100;
 }
