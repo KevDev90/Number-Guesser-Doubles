@@ -16,6 +16,7 @@ var randomNumber = null;
 var challenger1Hint = document.getElementById('challenger1-hint');
 var challenger2Hint = document.getElementById('challenger2-hint');
 var clearGame = document.getElementById('clear-game');
+var resetGame = document.getElementById('reset-game');
 
 
 updateButton.addEventListener('click', updateGame);
@@ -28,6 +29,7 @@ function updateGame() {
   genRandomNumber();
   updateRange();
   clearRangeInput();
+  resetGame.disabled = false;
   console.log(randomNumber);
 };
 
