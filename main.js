@@ -12,23 +12,26 @@ var challenger1GuessInput = document.querySelector('#number-guess-box1')
 var challenger2GuessInput = document.querySelector('#number-guess-box2')
 var challenger1Guess = document.getElementById('challenger1-guess-result')
 var challenger2Guess = document.getElementById('challenger2-guess-result')
-var minRange = parseInt('minRangeInput.value');
-var maxRange = parseInt('maxRangeInput.value');
-var randomNumber = function getRandomNumber(min, max) {
-  Math.floor(Math.random() * (max - min + 1)) + min;
-}
+var randomNumber = null;
+var challenger1Hint = document.getElementById('challenger1-hint');
+var challenger2Hint = document.getElementById('challenger2-hint');
+
+updateButton.addEventListener('click', updateGame);
 
 
-updateButton.addEventListener('click', function() {
-  getRandomNumber(minRange, maxRange);
+submitGuessButton.addEventListener('click', submitGuess);
+
+
+function updateGame() {
+  var min = minRangeInput.value;
+  var max = maxRangeInput.value;
+  randomNumber = Math.floor(Math.random() * (+max - +min)) + +min;
   minRangeChoice.innerText = `${minRangeInput.value}`;
   maxRangeChoice.innerText = `${maxRangeInput.value}`;
   minRangeInput.value = '';
   maxRangeInput.value = '';
   console.log(randomNumber);
-});
-
-submitGuessButton.addEventListener('click', submitGuess);
+};
 
 function submitGuess() {
   for (var i = 0; i < challenger1Name.length; i++) {
@@ -37,4 +40,18 @@ function submitGuess() {
     challenger2Name[i].innerText = `${challenger2NameInput.value} `};
   challenger1Guess.innerText = ` ${challenger1GuessInput.value}`;
   challenger2Guess.innerText = ` ${challenger2GuessInput.value}`;
+  if (challenger1GuessInput.value > randomNumber) {
+    challenger1Hint.innerText = 'that\'s too high!'
+  } else if (challenger1GuessInput.value < randomNumber) {
+    challenger1Hint.innerText = 'that\'s too low!'
+  } else {
+  challenger1Hint.innerText = 'BOOM!'
+  };
+  if (challenger2GuessInput.value > randomNumber) {
+    challenger2Hint.innerText = 'that\'s too high!'
+  } else if (challenger2GuessInput.value < randomNumber) {
+    challenger2Hint.innerText = 'that\'s too low!'
+  } else {
+  challenger2Hint.innerText = 'BOOM!'
+  };
 };
