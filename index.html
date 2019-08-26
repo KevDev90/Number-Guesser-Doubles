@@ -27,6 +27,7 @@
           <button type="button" id="update-button">UPDATE</button>
         </div>
       </form>
+    <form>
     <section class="left-tile" id="info-input">
       <p>The Current Range is <span id="min-range-choice">1</span> to <span id="max-range-choice">100</span></p>
       <section id="player-input">
@@ -36,17 +37,19 @@
            <h2 class="challenger2">Challenger 2</h2>
            <label for="-challenger2-name-box">Name</label><br><input id="challenger2-name-box" type="text">
        </article>
+
        <article id="guess-input">
          <label for="number-guess-box1">Guess</label><br><input id="number-guess-box1" type="number"><br><br><br>
          <label for="number-guess-box2">Guess</label><br><input id="number-guess-box2" type="number">
        </aritcle>
      </section>
       <div id="game-buttons">
-        <button type="button" id="submit-guess" disabled>SUBMIT GUESS</button>
-        <button type="button" id="reset-game" disabled>RESET GAME</button>
-        <button type="button" id="clear-game" disabled>CLEAR GAME</button>
+        <button type="button" id="submit-guess">SUBMIT GUESS</button>
+        <button type="reset" id="reset-game">RESET GAME</button>
+        <button type="button" id="clear-game">CLEAR GAME</button>
       </div>
     </section>
+    </form>
     <section class="left-tile" id="guesses">
       <h2 class="latest-score">Latest Score</h2>
       <section id="challenger1-guess">
