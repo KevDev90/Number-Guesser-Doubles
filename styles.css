@@ -143,7 +143,7 @@ input {
 }
 
 .range-error {
-  /* visibility: hidden; */
+  visibility: hidden;
   font-size: 16px;
 }
 
