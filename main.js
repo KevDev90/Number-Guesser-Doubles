@@ -32,11 +32,13 @@ resetGame.addEventListener('click', gameReset);
 function updateGame() {
   if (minRangeInput.value > maxRangeInput.value) {
     rangeError();
-  } if (minRangeInput.value === '' || maxRangeInput.value === '') {
+  } else if (minRangeInput.value === '' || maxRangeInput.value === '') {
     emptyError();
-  } if ()  {
-    emptyMaxError();
   }  else {
+    document.querySelector('.min-error').style.visibility = 'hidden';
+    document.querySelector('.max-error').style.visibility = 'hidden';
+    minRangeInput.style.border = '1px solid grey';
+    maxRangeInput.style.border = '1px solid grey';
     genRandomNumber();
     updateRange();
     clearRangeInput();
@@ -122,14 +124,11 @@ function rangeError() {
    minRangeInput.style.border = '1px solid #DD1972';
 }
 
-function emptyMinError() {
+function emptyError() {
     document.querySelector('.min-error').style.visibility = 'visible';
-    document.querySelector('.min-error').innerHTML = "<img class='error' src='error-icon.svg'> Input number";
+    document.querySelector('.min-error').innerHTML = "<img class='error' src='error-icon.svg'> Field Required";
     minRangeInput.style.border = '1px solid #DD1972';
-  }
-
-function emptyMaxError() {
     document.querySelector('.max-error').style.visibility = 'visible';
-    document.querySelector('.max-error').innerHTML = "<img class='error' src='error-icon.svg'> Input number";
+    document.querySelector('.max-error').innerHTML = "<img class='error' src='error-icon.svg'> Field Required";
     maxRangeInput.style.border = '1px solid #DD1972';
 }
