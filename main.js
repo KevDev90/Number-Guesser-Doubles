@@ -17,6 +17,9 @@ var challenger1Hint = document.getElementById('challenger1-hint');
 var challenger2Hint = document.getElementById('challenger2-hint');
 var clearGame = document.getElementById('clear-game');
 var resetGame = document.getElementById('reset-game');
+var n1 = parseInt(minRangeInput.value);
+var n2 = parseInt(maxRangeInput.value);
+var rangeInputError = document.querySelector('.range-error')
 
 updateButton.addEventListener('click', updateGame);
 
@@ -27,14 +30,19 @@ resetGame.addEventListener('click', gameReset);
 
 
 function updateGame() {
-  var n1 = parseInt(minRangeInput.value);
-
-  genRandomNumber();
-  updateRange();
-  clearRangeInput();
-  resetGame.disabled = false;
-  console.log(randomNumber);
-  challenger1GuessInput.setAttribute('min', n1);
+  if (minRangeInput.value > maxRangeInput.value) {
+    rangeError();
+  } if (minRangeInput.value === '' || maxRangeInput.value === '') {
+    emptyError();
+  } if ()  {
+    emptyMaxError();
+  }  else {
+    genRandomNumber();
+    updateRange();
+    clearRangeInput();
+    resetGame.disabled = false;
+    console.log(randomNumber);
+  }
 };
 
 function submitGuess() {
@@ -106,4 +114,22 @@ function inputCheck() {
 
 function gameReset() {
   genRandomNumber();
+}
+
+function rangeError() {
+   rangeInputError.style.visibility = 'visible';
+   rangeInputError.innerHTML = "<img class='error' src='error-icon.svg'> Invalid range";
+   minRangeInput.style.border = '1px solid #DD1972';
+}
+
+function emptyMinError() {
+    document.querySelector('.min-error').style.visibility = 'visible';
+    document.querySelector('.min-error').innerHTML = "<img class='error' src='error-icon.svg'> Input number";
+    minRangeInput.style.border = '1px solid #DD1972';
+  }
+
+function emptyMaxError() {
+    document.querySelector('.max-error').style.visibility = 'visible';
+    document.querySelector('.max-error').innerHTML = "<img class='error' src='error-icon.svg'> Input number";
+    maxRangeInput.style.border = '1px solid #DD1972';
 }
