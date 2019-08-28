@@ -19,14 +19,13 @@ var clearGame = document.getElementById('clear-game');
 var resetGame = document.getElementById('reset-game');
 var n1 = parseInt(minRangeInput.value);
 var n2 = parseInt(maxRangeInput.value);
-var rangeInputError = document.querySelector('.range-error')
+var rangeInputError = document.querySelector('.range-error');
+var infoInput = document.querySelector('#info-input')
 
 updateButton.addEventListener('click', updateGame);
 
 
-submitGuessButton.addEventListener('click', submitGuess);
 
-resetGame.addEventListener('click', gameReset);
 
 
 function updateGame() {
