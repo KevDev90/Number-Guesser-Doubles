@@ -8,7 +8,7 @@ body {
 
 p {
   color: #6E6E6E;
-  font-size: 20px;
+  font-size: 17px;
   margin: 0;
 }
 
@@ -32,8 +32,7 @@ header {
 }
 
 .whole-title {
-  color: #DD1972;
-  filter: brightness(100%);
+  color: #F74D9B;;
   margin-top: -30px;
   width: 100%;
 }
@@ -123,19 +122,29 @@ input {
 #set-range {
   display: flex;
   justify-content: space-between;
-  padding: 18.8px 0 16px 13.8px;
+  padding: 35px 0 5px 13.8px;
   position: relative;
 }
 
+.range-element {
+  margin-bottom: -7px;
+}
+
 #range-title {
+  font-size: 19px;
   margin: 0;
   position: absolute;
-  top: 7px;
+  top: 9px;
 }
 
 #min-range,
 #max-range {
   width: 95%;
+}
+
+.range-error {
+  /* visibility: hidden; */
+  font-size: 16px;
 }
 
 #update-button {
@@ -146,6 +155,7 @@ input {
   font-size: 23px;
   font-weight: bold;
   height: 44px;
+  margin-bottom: 26px;
   width: 86%;
 }
 
@@ -174,8 +184,25 @@ input {
   width: 25%;
 }
 
+.c1-guest-error {
+  margin-top: 2px;
+}
+
 #number-guess-box1 {
   margin-bottom: 7px;
+}
+
+#number-guess-box2 {
+
+}
+
+.error {
+  height: 13px;
+  width: 15px;
+}
+
+.error-text {
+  color: #DD1972;
 }
 
 #clear-game,
@@ -245,7 +272,6 @@ input {
 
 .guess-result {
   color: #DD1972;
-  filter: brightness(100%);
   font-size: 4.9em;
   font-weight: 800;
 }

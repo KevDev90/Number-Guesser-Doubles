@@ -18,10 +18,10 @@
       <form class="left-tile" id="set-range">
         <h2 id="range-title">Set Range</h2>
         <div class="range-element range-box1">
-          <p>Min Range<input type="number" class="range-box" id="min-range"></p>
+          <p>Min Range<input type="number" class="range-box" id="min-range"><span class='error-text range-error '><img class='error' src='error-icon.svg'> Enter a name</span></p>
         </div>
         <div class="range-element range-box2">
-          <p>Max Range<input type="number" class="range-box" id="max-range"></p>
+          <p>Max Range<input type="number" class="range-box" id="max-range"><span class='error-text range-error '><img class='error' src='error-icon.svg'> Enter a name</span></p>
         </div>
         <div class="range-element">
           <button type="button" id="update-button">UPDATE</button>
@@ -33,14 +33,14 @@
       <section id="player-input">
        <article id="name-input">
          <h2 class="challenger1">Challenger 1</h2>
-           <label for="-challenger1-name-box">Name</label><br><input id="challenger1-name-box" type="text">
+           <label for="-challenger1-name-box">Name</label><br><input id="challenger1-name-box" type="text"><span class='error-text c1error'><img class='error' src='error-icon.svg'> Enter a name</span>
            <h2 class="challenger2">Challenger 2</h2>
-           <label for="-challenger2-name-box">Name</label><br><input id="challenger2-name-box" type="text">
+           <label for="-challenger2-name-box">Name</label><br><input id="challenger2-name-box" type="text"><span class='error-text c2error'><img class='error' src='error-icon.svg'> Enter a name</span>
        </article>
 
        <article id="guess-input">
-         <label for="number-guess-box1">Guess</label><br><input id="number-guess-box1" type="number"><br><br><br>
-         <label for="number-guess-box2">Guess</label><br><input id="number-guess-box2" type="number">
+         <label for="number-guess-box1">Guess</label><br><input id="number-guess-box1" type="number"><span class='error-text '><img class='error' src='error-icon.svg'> Enter a name</span><br><br><br>
+         <label class='c1-guest-error' for="number-guess-box2">Guess</label><br><input id="number-guess-box2" type="number"><span class='error-text c1error'><img class='error' src='error-icon.svg'> Enter a name</span>
        </aritcle>
      </section>
       <div id="game-buttons">

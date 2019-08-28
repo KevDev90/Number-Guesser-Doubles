@@ -18,7 +18,6 @@ var challenger2Hint = document.getElementById('challenger2-hint');
 var clearGame = document.getElementById('clear-game');
 var resetGame = document.getElementById('reset-game');
 
-
 updateButton.addEventListener('click', updateGame);
 
 
@@ -28,11 +27,14 @@ resetGame.addEventListener('click', gameReset);
 
 
 function updateGame() {
+  var n1 = parseInt(minRangeInput.value);
+
   genRandomNumber();
   updateRange();
   clearRangeInput();
   resetGame.disabled = false;
   console.log(randomNumber);
+  challenger1GuessInput.setAttribute('min', n1);
 };
 
 function submitGuess() {
