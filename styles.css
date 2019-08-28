@@ -205,6 +205,13 @@ input {
   color: #DD1972;
 }
 
+.c1-error,
+.c2-error,
+.g1-error,
+.g2-error {
+  visibility: hidden;
+}
+
 #clear-game,
 #reset-game,
 #submit-guess {

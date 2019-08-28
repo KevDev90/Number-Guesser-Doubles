@@ -24,15 +24,16 @@ var infoInput = document.querySelector('#info-input')
 
 updateButton.addEventListener('click', updateGame);
 
-
-
+submitGuessButton.addEventListener('click', submitHandler);
 
 
 function updateGame() {
-  if (minRangeInput.value > maxRangeInput.value) {
+   if (minRangeInput.value > maxRangeInput.value) {
     rangeError();
-  } else if (minRangeInput.value === '' || maxRangeInput.value === '') {
-    emptyError();
+  } else if (minRangeInput.value === '') {
+    emptyMinError();
+  } else if(maxRangeInput.value === '') {
+    emptyMaxError();
   }  else {
     document.querySelector('.min-error').style.visibility = 'hidden';
     document.querySelector('.max-error').style.visibility = 'hidden';
@@ -45,6 +46,29 @@ function updateGame() {
     console.log(randomNumber);
   }
 };
+
+function submitHandler() {
+  if (challenger1NameInput.value === '') {
+    challenger1Error();
+  } if (challenger2NameInput.value === '') {
+    challenger2Error();
+  } if (challenger1GuessInput.value === '') {
+    guess1Error();
+  } if(challenger2GuessInput.value === '') {
+    guess2Error();
+  } else {
+    document.querySelector('.c1-error').style.visibility = 'hidden';
+    document.querySelector('.c2-error').style.visibility = 'hidden';
+    document.querySelector('.g1-error').style.visibility = 'hidden';
+    document.querySelector('.g2-error').style.visibility = 'hidden';
+    challenger1NameInput.style.border = '1px solid grey';
+    challenger2NameInput.style.border = '1px solid grey';
+    challenger1GuessInput.style.border = '1px solid grey';
+    challenger2GuessInput.style.border = '1px solid grey';
+    submitGuess();
+  }
+}
+
 
 function submitGuess() {
   changeNames();
@@ -123,11 +147,40 @@ function rangeError() {
    minRangeInput.style.border = '1px solid #DD1972';
 }
 
-function emptyError() {
+function emptyMinError() {
     document.querySelector('.min-error').style.visibility = 'visible';
     document.querySelector('.min-error').innerHTML = "<img class='error' src='error-icon.svg'> Field Required";
     minRangeInput.style.border = '1px solid #DD1972';
+}
+
+function emptyMaxError() {
     document.querySelector('.max-error').style.visibility = 'visible';
     document.querySelector('.max-error').innerHTML = "<img class='error' src='error-icon.svg'> Field Required";
     maxRangeInput.style.border = '1px solid #DD1972';
+}
+
+
+
+function challenger1Error() {
+  document.querySelector('.c1-error').style.visibility = 'visible';
+  document.querySelector('.c1-error').innerHTML = "<img class='error' src='error-icon.svg'> Field Required";
+  challenger1NameInput.style.border = '1px solid #DD1972';
+}
+
+function challenger2Error() {
+  document.querySelector('.c2-error').style.visibility = 'visible';
+  document.querySelector('.c2-error').innerHTML = "<img class='error' src='error-icon.svg'> Field Required";
+  challenger2NameInput.style.border = '1px solid #DD1972';
+}
+
+function guess1Error() {
+  document.querySelector('.g1-error').style.visibility = 'visible';
+  document.querySelector('.g1-error').innerHTML = "<img class='error' src='error-icon.svg'> Field Required";
+  challenger1GuessInput.style.border = '1px solid #DD1972';
+}
+
+function guess2Error() {
+  document.querySelector('.g2-error').style.visibility = 'visible';
+  document.querySelector('.g2-error').innerHTML = "<img class='error' src='error-icon.svg'> Field Required";
+  challenger2GuessInput.style.border = '1px solid #DD1972';
 }
