@@ -35,6 +35,5 @@
 
 ## Screenshots from our Page: 
 
-![Top Screenshot](<img width="1440" alt="Screen Shot 2019-08-28 at 6 26 31 PM" src="https://user-images.githubusercontent.com/52764657/63901976-49c60d00-c9c4-11e9-8838-397cd3ae7928.png">)
-![Bottom Screenshot](<img width="1440" alt="Screen Shot 2019-08-28 at 6 27 32 PM" src="https://user-images.githubusercontent.com/52764657/63901994-65311800-c9c4-11e9-9261-970e076439a6.png">
-)
+![Top Screenshot](img width="1440" alt="Screen Shot 2019-08-28 at 6 26 31 PM" src="https://user-images.githubusercontent.com/52764657/63901976-49c60d00-c9c4-11e9-8838-397cd3ae7928.png")
+![Bottom Screenshot](img width="1440" alt="Screen Shot 2019-08-28 at 6 27 32 PM" src="https://user-images.githubusercontent.com/52764657/63901994-65311800-c9c4-11e9-9261-970e076439a6.png")
