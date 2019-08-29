@@ -29,3 +29,6 @@
   
   Overall we took a lot of pleasure in working on this project and learned a ton about implementing Javascript! 
   
+## Design Comp:
+
+![Design Comp](
