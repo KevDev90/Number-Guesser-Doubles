@@ -30,9 +30,6 @@ updateButton.addEventListener('click', updateGame);
 
 submitGuessButton.addEventListener('click', submitHandler);
 
-// resetGame.addEventListener('click', resetHandler);
-
-
 function updateGame() {
    if (n1 > n2) {
     rangeError();
