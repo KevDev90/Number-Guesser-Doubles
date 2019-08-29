@@ -140,7 +140,6 @@ function giveHint() {
 
 function inputCheck() {
   if (challenger1NameInput.value.length > 0 || challenger2NameInput.value.length > 0 || challenger1GuessInput.value.length > 0 || challenger2GuessInput.value.length > 0) {
-    console.log('hi');
     clearGame.disabled = false;
   }
 };
