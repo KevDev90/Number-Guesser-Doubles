@@ -144,7 +144,7 @@ input {
 
 .range-error {
   visibility: hidden;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 #update-button {
@@ -203,6 +203,7 @@ input {
 
 .error-text {
   color: #DD1972;
+  font-size: .72em;
 }
 
 .c1-error,
@@ -317,7 +318,7 @@ input {
 }
 
 .hint-box-name {
-  font-size: 25px;
+  font-size: 21px;
 }
 
 #vs {
@@ -380,4 +381,69 @@ input {
   color: #6E6E6E;
   font-size: 16px;
   font-weight: 100;
+}
+@media screen and (max-width: 1024px) {
+  body {
+    zoom: 75%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+body {
+  zoom: 75%;
+}
+
+main {
+  display: inline;
+}
+
+.half {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 414px) {
+ body {
+   zoom: 50%;
+ }
+
+ main {
+   display: inline;
+ }
+
+ .half {
+   width: 100%;
+ }
+ #set-range {
+   display: block;
+ }
+
+ .range-element {
+   width: 100%;
+ }
+
+ #player-input {
+   display: block;
+ }
+
+ #name-input,
+ #guess-input {
+   width: 82%;
+ }
+
+ #guesses {
+   display: block;
+ }
+
+ #challenger1-guess {
+   border-bottom: 1px solid grey;
+   border-right: none;
+ }
+
+ #challenger1-guess,
+ #challenger2-guess {
+   width: 100%;
+ }
+
 }

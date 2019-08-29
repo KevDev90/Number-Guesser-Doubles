@@ -19,6 +19,10 @@ var clearGame = document.getElementById('clear-game');
 var resetGame = document.getElementById('reset-game');
 var n1 = parseInt(minRangeInput.value);
 var n2 = parseInt(maxRangeInput.value);
+var textMin = parseInt(minRangeChoice.innerText);
+var textMax = parseInt(maxRangeChoice.innerText);
+var g1 = parseInt(challenger1GuessInput.value);
+var g2 = parseInt(challenger2GuessInput.value);
 var rangeInputError = document.querySelector('.range-error');
 var infoInput = document.querySelector('#info-input')
 
@@ -26,9 +30,11 @@ updateButton.addEventListener('click', updateGame);
 
 submitGuessButton.addEventListener('click', submitHandler);
 
+// resetGame.addEventListener('click', resetHandler);
+
 
 function updateGame() {
-   if (minRangeInput.value > maxRangeInput.value) {
+   if (n1 > n2) {
     rangeError();
   } else if (minRangeInput.value === '') {
     emptyMinError();
@@ -56,7 +62,11 @@ function submitHandler() {
     guess1Error();
   } if(challenger2GuessInput.value === '') {
     guess2Error();
-  } else {
+  } if (parseInt(challenger1GuessInput.value) <         parseInt(minRangeChoice.innerText) || parseInt(challenger1GuessInput.value) > maxRangeChoice.innerText) {
+    challenger1OutOfRange();
+  } if (parseInt(challenger2GuessInput.value) < minRangeChoice.innerText || parseInt(challenger2GuessInput.value) > maxRangeChoice.innerText) {
+    challenger2OutOfRange();
+  }  else {
     document.querySelector('.c1-error').style.visibility = 'hidden';
     document.querySelector('.c2-error').style.visibility = 'hidden';
     document.querySelector('.g1-error').style.visibility = 'hidden';
@@ -183,4 +193,16 @@ function guess2Error() {
   document.querySelector('.g2-error').style.visibility = 'visible';
   document.querySelector('.g2-error').innerHTML = "<img class='error' src='error-icon.svg'> Field Required";
   challenger2GuessInput.style.border = '1px solid #DD1972';
+}
+
+function challenger1OutOfRange() {
+  document.querySelector('.g1-error').style.visibility = 'visible';
+  document.querySelector('.g1-error').innerHTML = "<img class='error' src='error-icon.svg'> Outside of Range";
+  challenger1GuessInput.style.border = '1px solid #DD1972';
+}
+
+function challenger2OutOfRange() {
+  document.querySelector('.g2-error').style.visibility = 'visible';
+  document.querySelector('.g2-error').innerHTML = "<img class='error' src='error-icon.svg'> Outside of Range";
+  challenger1GuessInput.style.border = '1px solid #DD1972';
 }
