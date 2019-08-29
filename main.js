@@ -31,7 +31,7 @@ updateButton.addEventListener('click', updateGame);
 submitGuessButton.addEventListener('click', submitHandler);
 
 function updateGame() {
-   if (n1 > n2) {
+   if (parseInt(minRangeInput.value) > parseInt(maxRangeInput.value)) {
     rangeError();
   } else if (minRangeInput.value === '') {
     emptyMinError();
@@ -49,30 +49,51 @@ function updateGame() {
   }
 };
 
+
 function submitHandler() {
+  var bSubmitGuess = true;
   if (challenger1NameInput.value === '') {
     challenger1Error();
-  } if (challenger2NameInput.value === '') {
-    challenger2Error();
-  } if (challenger1GuessInput.value === '') {
-    guess1Error();
-  } if(challenger2GuessInput.value === '') {
-    guess2Error();
-  } if (parseInt(challenger1GuessInput.value) <         parseInt(minRangeChoice.innerText) || parseInt(challenger1GuessInput.value) > maxRangeChoice.innerText) {
-    challenger1OutOfRange();
-  } if (parseInt(challenger2GuessInput.value) < minRangeChoice.innerText || parseInt(challenger2GuessInput.value) > maxRangeChoice.innerText) {
-    challenger2OutOfRange();
-  }  else {
+    bSubmitGuess = false;
+  } else {
     document.querySelector('.c1-error').style.visibility = 'hidden';
-    document.querySelector('.c2-error').style.visibility = 'hidden';
-    document.querySelector('.g1-error').style.visibility = 'hidden';
-    document.querySelector('.g2-error').style.visibility = 'hidden';
     challenger1NameInput.style.border = '1px solid grey';
+  }
+  if (challenger2NameInput.value === '') {
+    challenger2Error();
+    bSubmitGuess = false;
+  } else {
+    document.querySelector('.c2-error').style.visibility = 'hidden';
     challenger2NameInput.style.border = '1px solid grey';
+  }
+  if (challenger1GuessInput.value === '') {
+    guess1Error();
+    bSubmitGuess = false;
+  } else {
+    document.querySelector('.g1-error').style.visibility = 'hidden';
     challenger1GuessInput.style.border = '1px solid grey';
+  }
+  if(challenger2GuessInput.value === '') {
+    guess2Error();
+    bSubmitGuess = false;
+  } else {
+    document.querySelector('.g2-error').style.visibility = 'hidden';
     challenger2GuessInput.style.border = '1px solid grey';
+  }
+  if (parseInt(challenger1GuessInput.value) < parseInt(minRangeChoice.innerText) || parseInt(challenger1GuessInput.value) > maxRangeChoice.innerText) {
+    challenger1OutOfRange();
+    bSubmitGuess = false;
+  }
+
+  if (parseInt(challenger2GuessInput.value) < minRangeChoice.innerText ||            parseInt(challenger2GuessInput.value) > maxRangeChoice.innerText) {
+    challenger2OutOfRange();
+    bSubmitGuess = false;
+  }
+
+  if(bSubmitGuess) {
     submitGuess();
   }
+
 }
 
 
