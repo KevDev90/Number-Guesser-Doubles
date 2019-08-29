@@ -31,4 +31,4 @@
   
 ## Design Comp:
 
-![Design Comp](
+![Design Comp](comp.jpg)
