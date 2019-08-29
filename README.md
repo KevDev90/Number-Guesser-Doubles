@@ -35,5 +35,5 @@
 
 ## Screenshots from our Page: 
 
-![Top ScreenshotScreen Shot 2019-08-28 at 6.26.31 PM.png
-![Bottom Screenshot]()
+![Top Screenshot](Screen Shot 2019-08-28 at 6.26.31 PM.png)
+![Bottom Screenshot](Screen Shot 2019-08-28 at 6.27.32 PM.png)
