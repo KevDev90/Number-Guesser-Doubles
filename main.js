@@ -49,7 +49,6 @@ function updateGame() {
     updateRange();
     clearRangeInput();
     resetGame.disabled = false;
-    console.log(randomNumber);
   }
 };
 
@@ -95,7 +94,6 @@ function genRandomNumber() {
     max = 100;
   }
   randomNumber = Math.floor(Math.random() * (+max - +min)) + +min;
-  console.log(randomNumber);
 };
 
 
