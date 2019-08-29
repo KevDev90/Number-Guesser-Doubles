@@ -32,3 +32,8 @@
 ## Design Comp:
 
 ![Design Comp](comp.jpg)
+
+## Screenshots from our Page: 
+
+![Top Screenshot]()
+![Bottom Screenshot]()
